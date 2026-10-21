@@ -1,0 +1,71 @@
+main .portfolio .portfolio-track {
+  display: grid;
+  grid-auto-columns: 82%;
+  grid-auto-flow: column;
+  gap: 15px;
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+  overflow-x: auto;
+  scroll-padding: 0 10px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+main .portfolio .portfolio-track::-webkit-scrollbar {
+  display: none;
+}
+
+main .portfolio li {
+  position: relative;
+  padding-bottom: 60px;
+  scroll-snap-align: start;
+}
+
+main .portfolio .portfolio-image {
+  overflow: hidden;
+  border-radius: var(--radius);
+  line-height: 0;
+}
+
+main .portfolio .portfolio-image img {
+  width: 100%;
+  aspect-ratio: 332 / 362;
+  object-fit: cover;
+}
+
+main .portfolio .portfolio-caption {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  box-sizing: border-box;
+  width: 80%;
+  padding: 20px 10px 45px;
+  border-radius: var(--radius);
+  background-color: #fff;
+  box-shadow: 0 0 65px rgb(0 0 0 / 9%);
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+main .portfolio .portfolio-caption h3 {
+  margin: 0 0 3px;
+  font-size: 20px;
+}
+
+main .portfolio .portfolio-caption p {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+@media (width >= 600px) {
+  main .portfolio .portfolio-track {
+    grid-auto-columns: calc((100% - 20px - 15px) / 2);
+  }
+}
+
+@media (width >= 900px) {
+  main .portfolio .portfolio-track {
+    grid-auto-columns: calc((100% - 20px - 45px) / 4);
+  }
+}

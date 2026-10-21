@@ -1,0 +1,126 @@
+main .contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+main .contact .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+main .contact .contact-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 30px 25px;
+  background-color: #fff;
+  box-shadow: var(--shadow-s);
+}
+
+main .contact .contact-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 64% 36% 55% 45% / 51% 52% 48% 49%;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+main .contact .contact-icon .icon {
+  width: 22px;
+  height: 22px;
+}
+
+main .contact .contact-text h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+main .contact .contact-text p {
+  margin: 0;
+}
+
+main .contact .contact-form h2 {
+  margin-bottom: 30px;
+  font-size: 27px;
+  text-align: center;
+}
+
+main .contact form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+main .contact .contact-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+main .contact input,
+main .contact textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  background-color: #fff;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+main .contact textarea {
+  min-height: 105px;
+  resize: vertical;
+}
+
+main .contact input:focus,
+main .contact textarea:focus {
+  border-color: var(--primary-color);
+  outline: 0;
+}
+
+main .contact .contact-submit {
+  width: 100%;
+  border-color: #0057ff;
+  background-color: #0057ff;
+  font-weight: 700;
+}
+
+main .contact .contact-status {
+  margin: 0;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+main .contact .contact-status:empty {
+  display: none;
+}
+
+@media (width >= 600px) {
+  main .contact form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main .contact .contact-field-full,
+  main .contact .contact-submit,
+  main .contact .contact-status {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (width >= 900px) {
+  main .contact {
+    grid-template-columns: 1fr 2.1fr;
+    align-items: start;
+  }
+}

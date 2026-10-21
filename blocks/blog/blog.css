@@ -1,0 +1,104 @@
+main .blog > ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+main .blog li {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgb(245 242 242);
+}
+
+main .blog .blog-image {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+}
+
+main .blog .blog-image img {
+  width: 100%;
+  aspect-ratio: 364 / 222;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+main .blog li:hover .blog-image img {
+  transform: scale(1.05);
+}
+
+main .blog .blog-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1;
+  margin: 0;
+  line-height: 1.5;
+}
+
+main .blog .blog-tag a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 10px;
+  border-radius: var(--radius);
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 14px;
+}
+
+main .blog .blog-tag .icon {
+  width: 12px;
+  height: 12px;
+}
+
+main .blog .blog-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 15px 20px 24px;
+}
+
+main .blog .blog-body h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+main .blog .blog-body h3 a {
+  color: var(--heading-color);
+}
+
+main .blog .blog-body h3 a:hover {
+  color: var(--primary-color);
+}
+
+main .blog .blog-body p {
+  margin: 0;
+}
+
+main .blog .blog-body .button-wrapper {
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+main .blog .blog-body a.button:any-link {
+  padding: 7px 20px;
+  font-weight: 400;
+}
+
+@media (width >= 600px) {
+  main .blog > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  main .blog > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

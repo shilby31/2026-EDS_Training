@@ -1,0 +1,40 @@
+main .logos .logos-track {
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-auto-flow: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+main .logos .logos-track::-webkit-scrollbar {
+  display: none;
+}
+
+main .logos li {
+  display: flex;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+main .logos img {
+  display: block;
+  max-height: 74px;
+  width: auto;
+}
+
+@media (width >= 600px) {
+  main .logos .logos-track {
+    grid-auto-columns: calc(100% / 2);
+  }
+}
+
+@media (width >= 900px) {
+  main .logos .logos-track {
+    grid-auto-columns: calc(100% / 4);
+  }
+}

@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--2026-EDS_Training--shilby31.aem.page/
-- Live: https://main--2026-EDS_Training--shilby31.aem.live/
+- Preview: https://main--2026-eds-training--shilby31.aem.page/
+- Live: https://main--2026-eds-training--shilby31.aem.live/
 
 ## Documentation
 

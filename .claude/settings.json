@@ -1,0 +1,15 @@
+{
+  "enabledPlugins": {
+    "aem-edge-delivery-services@adobe-skills": true,
+    "aem-eds-content-ops@adobe-skills": true,
+    "aem-project-management@adobe-skills": true
+  },
+  "extraKnownMarketplaces": {
+    "adobe-skills": {
+      "source": {
+        "source": "github",
+        "repo": "adobe/skills"
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+main .testimonials .testimonials-track {
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-auto-flow: column;
+  gap: 30px;
+  margin: 0;
+  padding: 10px 0 20px;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+main .testimonials .testimonials-track::-webkit-scrollbar {
+  display: none;
+}
+
+main .testimonials .testimonials-card {
+  padding: 30px 15px 25px;
+  background-color: #fff;
+  box-shadow: var(--shadow-s);
+  scroll-snap-align: start;
+}
+
+main .testimonials .testimonials-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+main .testimonials .testimonials-photo img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+main .testimonials .testimonials-author h3 {
+  margin: 0 0 3px;
+  font-size: 18px;
+}
+
+main .testimonials .testimonials-role {
+  margin: 0;
+  color: var(--heading-color);
+  font-size: 15px;
+}
+
+main .testimonials .testimonials-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  font-size: 15px;
+}
+
+main .testimonials .testimonials-rating .icon {
+  width: 14px;
+  height: 14px;
+}
+
+main .testimonials .testimonials-rating .icon:last-of-type {
+  margin-right: 12px;
+}
+
+main .testimonials .testimonials-body p:last-child {
+  margin: 0;
+  font-size: 15px;
+}
+
+@media (width >= 900px) {
+  main .testimonials .testimonials-track {
+    grid-auto-columns: calc((100% - 30px) / 2);
+  }
+}

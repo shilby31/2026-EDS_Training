@@ -31,3 +31,47 @@
     order: unset;
   }
 }
+
+/* about: image beside intro copy with a checklist */
+.columns.about > div {
+  gap: 30px;
+}
+
+.columns.about h2 {
+  margin-bottom: 15px;
+}
+
+.columns.about ul {
+  margin: 0 0 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.columns.about li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 7.5px;
+  color: var(--heading-color);
+}
+
+.columns.about li .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.columns.about .button-wrapper {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.columns.about a.button:any-link {
+  border-radius: 30px;
+  padding: 7px 30px;
+}
+
+@media (width >= 900px) {
+  .columns.about .button-wrapper {
+    text-align: left;
+  }
+}

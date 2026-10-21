@@ -143,12 +143,22 @@ function decorateButtons(main) {
 }
 
 /**
+ * Decorates icons and exposes each SVG as a CSS mask so icons inherit the text color.
+ * @param {Element} element The container element
+ */
+export function decorateIconMasks(element) {
+  decorateIcons(element);
+  element.querySelectorAll('span.icon > img[data-icon-name]').forEach((img) => {
+    img.parentElement.style.setProperty('--icon-url', `url("${img.src}")`);
+  });
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
-// eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
-  decorateIcons(main);
+  decorateIconMasks(main);
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
